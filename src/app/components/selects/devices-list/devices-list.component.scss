@@ -1,0 +1,11 @@
+.form-input-select {
+  border-bottom: none;
+
+  ::ng-deep .mdc-line-ripple {
+    display: none;
+  }
+
+  // ::ng-deep.mat-mdc-text-field-wrapper {
+  //   width: 50%;
+  // }
+}

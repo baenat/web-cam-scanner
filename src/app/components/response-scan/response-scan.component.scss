@@ -1,0 +1,36 @@
+@import "src/assets/scss/colors.scss";
+
+// .content-results {
+//   margin-bottom: 30px;
+// }
+
+section.results {
+  border-radius: 12px;
+  margin: 16px 0;
+  border: 1px solid #c4c6d0;
+}
+
+.content-response {
+  padding: 16px 24px;
+  word-wrap: break-word;
+}
+
+.content-header {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 16px 16px 0 24px;
+
+  .response {
+    flex: 1 1 auto;
+    color: #44474e;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin: auto 10px;
+  }
+}

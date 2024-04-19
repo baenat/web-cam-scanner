@@ -1,0 +1,7 @@
+<mat-form-field style="width: 100%;" class="form-input-select" appearance="fill">
+  <mat-select class="form-control" (selectionChange)="onDeviceSelectChange($event)" placeholder="Select device">
+    <!-- <mat-option value="" [selected]="!currentDevice?.deviceId" >No Device Selected</mat-option> -->
+    <mat-option *ngFor="let device of availableDevices" [value]="device.deviceId">{{ device.label }}</mat-option>
+    <!-- [selected]="currentDevice && device.deviceId === currentDevice.deviceId" -->
+  </mat-select>
+</mat-form-field>

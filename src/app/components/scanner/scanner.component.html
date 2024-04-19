@@ -1,0 +1,18 @@
+<div class="container-list">
+  <devices-list [availableDevices]="availableDevices" (onChangeAction)="onDeviceSelectChange($event)"></devices-list>
+</div>
+
+<div class="container-scanner">
+  <zxing-scanner [torch]="torchEnabled" [(device)]="currentDevice" (scanSuccess)="onCodeResult($event)"
+    [formats]="allowedFormats" [tryHarder]="tryHarder" (permissionResponse)="onHasPermission($event)"
+    (camerasFound)="onCamerasFound($event)" (torchCompatible)="onTorchCompatible($event)" [autofocusEnabled]="true">
+  </zxing-scanner>
+</div>
+
+<div class="container-response" *ngIf="qrResultString">
+  <response-scan [dataResponse]="qrResultString" (onChangeAction)="changeAction($event)"></response-scan>
+</div>
+
+<div class="container-permission" *ngIf="!hasDevices || !hasPermission">
+  <msg-permission [hasDevices]="hasDevices" [hasPermission]="hasPermission"></msg-permission>
+</div>
