@@ -1,3 +1,5 @@
+@import "src/assets/scss/colors.scss";
+
 .container-scanner {
   // margin: 40px auto;
   margin-bottom: 20px;
@@ -12,7 +14,8 @@
   box-shadow: #121212 0 0 0 1px, transparent 0 0 0 0;
 }
 
-::ng-deep zxing-scanner video, video {
+::ng-deep zxing-scanner video,
+video {
   // width: 333px;
   // height: 250px;
   max-width: 100%;

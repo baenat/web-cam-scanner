@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BarcodeFormat } from '@zxing/library';
 import { BehaviorSubject } from 'rxjs';
 import { formatsAvailable, formatNames } from './barcode-formats';
+import { SnackbarService } from 'src/app/services/snackbar.service';
 
 @Component({
   selector: 'app-scanner',
@@ -23,6 +24,8 @@ export class ScannerComponent {
   torchAvailable$ = new BehaviorSubject<boolean>(false);
   tryHarder = false;
 
+  constructor(private _snackbarService: SnackbarService) { }
+
   onCamerasFound(devices: MediaDeviceInfo[]): void {
     this.availableDevices = devices;
     this.hasDevices = Boolean(devices && devices.length);
@@ -35,6 +38,7 @@ export class ScannerComponent {
 
   onCodeResult(resultString: string) {
     this.qrResultString = resultString;
+    this._snackbarService.openSnackBar('Success', 'Ok', 2000);
   }
 
   clearResult(): void {
