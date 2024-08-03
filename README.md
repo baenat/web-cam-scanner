@@ -50,12 +50,12 @@ Para instalar y ejecutar la aplicación localmente, sigue estos pasos:
 1. Clona el repositorio:
 
     ```sh
-      git clone https://github.com/baenat/scanner-barcode.git
+      git clone https://github.com/baenat/web-cam-scanner.git
     ```
 2. Navega al directorio del proyecto:
 
     ```sh
-      cd scanner-barcode
+      cd web-cam-scanner
     ```
 3. Instalar las dependencias:
 
@@ -68,7 +68,7 @@ Para instalar y ejecutar la aplicación localmente, sigue estos pasos:
 ### Frontend
 
 ```sh
-cd scanner-barcode
+cd web-cam-scanner
 ng serve
 ```
 
